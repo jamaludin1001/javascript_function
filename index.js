@@ -1,6 +1,6 @@
 alert(`Selamat datang di game tebak angka
-kamu diminta untuk menebak angka 1 - 5
-dan kamu akan bermain dalam 5 ronde.
+kamu diminta untuk menebak angka 1 - 3
+dan kamu akan bermain dalam 3 ronde.
 player yang berhasil mengumpulkan tebakan terbanyak akan menang
 SELAMAT BERMAIN!!!`);
 let skorP1 = 0;
@@ -37,7 +37,7 @@ while (stop) {
     - Player 2: ${skorP2}`);
 
     ronde++;
-    if (ronde <= 5) {
+    if (ronde <= 3) {
       stop = window.confirm("Ronde " + ronde + "?");
     } else {
       if (skorP1 > skorP2) {
@@ -68,7 +68,7 @@ function validasi(player1, player2) {
     return false;
   }
 
-  if (player1 > 5 || player2 > 5) {
+  if (player1 > 3 || player2 > 3) {
     alert("tebakan tidak boleh lebih besar dari 5");
     return false;
   }
@@ -82,7 +82,7 @@ function validasi(player1, player2) {
 }
 
 function getRandom() {
-  const range = [1, 2, 3, 4, 5];
+  const range = [1, 2, 3];
   let isNotRandom = true;
   while (isNotRandom) {
     let random = Math.floor(Math.random() * 10);
