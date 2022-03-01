@@ -69,7 +69,7 @@ function validasi(player1, player2) {
   }
 
   if (player1 > 3 || player2 > 3) {
-    alert("tebakan tidak boleh lebih besar dari 5");
+    alert("tebakan tidak boleh lebih besar dari 3");
     return false;
   }
 
